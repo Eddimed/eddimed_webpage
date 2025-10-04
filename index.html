@@ -3,42 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO meta description: usually up to ~155–160 characters -->
+    <meta name="description"
+        content="Eddimed bietet innovative Lösungen für CGM-Datenanalyse, 
+            Risikobewertung für Versicherungen und ML-basierte Services.">
+
+    <!-- Open Graph tags for rich link previews -->
+    <meta property="og:title" content="Eddimed - Softwarelösungen und Services für Diabsurance, Versicherer und Startups">
+    <meta property="og:description"
+        content="Eddimed bietet innovative Lösungen für CGM-Datenanalyse, 
+            Risikobewertung für Versicherungen und ML-basierte Services.">
+    <meta property="og:image" content="https://www2.eddimed.eu/img/eddimed_dark_bg_with_subtitle.png">
+    <meta property="og:url" content="https://www2.eddimed.eu/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card metadata -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Eddimed - Softwarelösungen und Services für Diabsurance, Versicherer und Startups">
+    <meta name="twitter:description"
+        content="Eddimed bietet innovative Lösungen für CGM-Datenanalyse, 
+            Risikobewertung für Versicherungen und ML-basierte Services.">
+    <meta name="twitter:image" content="https://www2.eddimed.eu/img/eddimed_dark_bg_with_subtitle.png">
+
+    <meta name="robots" content="index, follow">
+
     <title>Eddimed - CGM Data Analytics & Risk Assessment</title>
+    <link rel="icon" href="img/eddimed_dark_bg_with_subtitle.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script defer data-domain="eddimed.eu"
+        src="https://plausible.io/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
+    <script>window.plausible = window.plausible || function () { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4472c4',
-                        secondary: '#ffd800',
-                        accent: '#ff0000'
+                        'diab-blue': '#4285f4',
+                        'diab-green': '#34a853',
+                        'diab-light-blue': '#e8f0fe',
+                        'diab-light-green': '#e6f4ea'
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
                     }
                 }
             }
         }
     </script>
+
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Software",
+    "name": "Eddimed",
+    "url": "https://www2.eddimed.eu",
+    "logo": "https://www2.eddimed.eu/img/eddimed_dark_bg_with_subtitle.png",
+    "description": "Eddimed bietet innovative Lösungen für CGM-Datenanalyse, Risikobewertung für Versicherungen und ML-basierte Services.",
+    "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Erdbeerweg 24",
+        "addressLocality": "Stuttgart",
+        "postalCode": "70619",
+        "addressCountry": "DE"
+    },
+    "telephone": "+49 711 9933 5605",
+    "email": "info@eddimed.eu",
+    "sameAs": [
+        "https://www.facebook.com/eddimed",
+        "https://www.linkedin.com/company/eddimed"
+    ]
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --diab-light-blue: #e8f0fe;
+            --diab-light-green: #e6f4ea;
+        }
+        .glass-effect {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+        }
+
+        .hover-lift {
+            transition: all 0.3s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        /* Gradient background for sections 
+        section.gradient-bg {
+            padding: 1.25rem;
+            background: linear-gradient(to bottom right, var(--diab-light-blue), white, var(--diab-light-green));
+        }
+        */
+        a { color: #2563eb; }
+        a:visited { color: #7c3aed; }
+        a:hover { color: #1e40af; text-decoration: underline; }
+        a:active { color: #1d4ed8; text-decoration: underline; }
+        .container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container { padding-left: 1.5rem; padding-right: 1.5rem; }
+        }
+        @media (min-width: 1024px) {
+            .container { padding-left: 2rem; padding-right: 2rem; }
+        }
+    </style>
 </head>
-<body class="bg-white">
+
+<body class="bg-white font-sans">
     <!-- Navigation -->
-    <nav class="bg-white shadow-lg fixed w-full z-50 top-0">
-        <div class="max-w-7xl mx-auto px-4">
+    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 top-0 border-b border-gray-100">
+        <div class="container">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center space-x-3">
-                    <div class="text-2xl font-bold text-primary">
-                        <i class="fas fa-heartbeat mr-2"></i>
-                        Eddimed
+                    <div class="text-2xl font-bold text-diab-blue flex items-center">
+                        <a href="index.html"><img src="img/eddimed_w_subtitle_green.png" alt="Eddimed Logo"
+                            class="h-20 w-auto"></a>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#services" class="text-gray-700 hover:text-primary transition-colors duration-300">Leistungen</a>
-                    <a href="#about" class="text-gray-700 hover:text-primary transition-colors duration-300">Über uns</a>
-                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-300">Kontakt</a>
-                    <a href="#shop" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">Shop</a>
+                    <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über uns</a>
+                    <a href="#Expertise" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Expertise</a>
+                    <a href="#Risiko_Score" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Risiko Score</a>
+                    <a href="#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
                 </div>
                 <div class="md:hidden">
-                    <button class="text-gray-700 hover:text-primary">
+                    <button class="text-gray-700 hover:text-diab-blue">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -46,96 +152,61 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-blue-50 to-indigo-100 pt-24 pb-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center">
-                <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <div class="text-sm text-primary font-semibold mb-4 flex items-center">
+    <!-- About Section -->
+    <section id="About" class="pt-28 pb-4 bg-white">
+        <div class="container">
+                    <div class="text-right pt-4 px-4 sm:px-6 lg:px-8">
                         <i class="fas fa-map-marker-alt mr-2"></i>
-                        <a href="https://www.openstreetmap.org/relation/2793104">Stuttgart</a>, Juni 2025
-                    </div>
+                        <a
+                        href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                        rel="noopener noreferrer">Stuttgart</a>, Okt 2025</div>
                     <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                         CGM Data 
-                        <span class="text-primary">Analytics</span> 
+                        <span class="text-diab-blue">Analytics</span> 
                         & Risk Assessment
                     </h1>
-                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
                         Innovative Lösungen für kontinuierliche Glukose-Monitoring-Datenanalyse, 
                         Risikobeurteilung für Versicherungen und ML-basierte Services.
                     </p>
-                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="#services" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-600 transition-all duration-300 transform hover:scale-105 text-center">
-                            Unsere Services
-                        </a>
-                        <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300 text-center">
-                            Kontakt aufnehmen
-                        </a>
-                    </div>
-                </div>
-                <div class="lg:w-1/2 flex justify-center">
-                    <div class="relative">
-                        <div class="w-96 h-96 bg-gradient-to-br from-primary to-blue-600 rounded-full opacity-20 animate-pulse"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <div class="text-8xl text-primary opacity-80">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Unsere Leistungen</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+    <!-- Expertise Section -->
+    <section id="Expertise" class="py-20 gradient-bg">
+        <div class="container">
+            <div class="text-center mb-16 text-white">
+                <h2 class="text-4xl font-bold mb-4">Unsere Expertise</h2>
+                <p class="text-xl max-w-3xl mx-auto">
                     Wir bieten innovative Lösungen im Bereich der medizinischen Datenanalyse
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 gap-8">
                 <!-- Risk Assessment -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="text-4xl text-primary mb-6">
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
+                    <div class="text-4xl text-diab-blue mb-6">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Risikobewertung</h3>
                     <p class="text-gray-600 mb-6">
                         Professionelle Risikobeurteilung für Berufsunfähigkeitsversicherungen basierend auf CGM-Daten.
                     </p>
-                    <a href="#" class="text-primary font-semibold hover:text-blue-600 transition-colors duration-300">
+                    <a href="#" class="text-diab-blue font-semibold hover:text-blue-600 transition-colors duration-300">
                         Mehr erfahren <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
 
-                <!-- Online Shop -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="text-4xl text-accent mb-6">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Online Shop</h3>
-                    <p class="text-gray-600 mb-6">
-                        CGM-Datenanalyse-Reports und CGM-Sensoren mit detaillierten Auswertungen.
-                    </p>
-                    <a href="#" class="text-accent font-semibold hover:text-green-600 transition-colors duration-300">
-                        Zum Shop <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
                 <!-- Analytics + ML -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">
-                    <div class="text-4xl text-purple-500 mb-6">
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
+                    <div class="text-4xl text-diab-blue mb-6">
                         <i class="fas fa-brain"></i>
                     </div>
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Analytics + ML as a Service</h3>
                     <p class="text-gray-600 mb-6">
                         Machine Learning Lösungen basierend auf kontinuierlichen Glukose-Monitoring-Daten.
                     </p>
-                    <a href="#" class="text-purple-500 font-semibold hover:text-purple-600 transition-colors duration-300">
+                    <a href="#" class="text-diab-blue font-semibold hover:text-blue-600 transition-colors duration-300">
                         Service erkunden <i class="fas fa-arrow-right ml-2"></i>
                     </a>
                 </div>
@@ -143,126 +214,186 @@
         </div>
     </section>
 
-    <!-- Accelerator Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Unsere Partner & Unterstützer</h2>
-                <p class="text-xl text-gray-600">
-                    Stolz auf die Zusammenarbeit mit führenden Acceleratoren und Inkubatoren
-                </p>
+    <!-- Risiko Score Section -->
+    <section id="Risiko_Score" class="py-12">
+        <div id="CRS"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">CGM-basierter Risiko Score (CRS)</h2>
+            <div class="text-center">
+                <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
             </div>
-
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-3xl text-primary mb-4">
-                        <i class="fas fa-dna"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Life Science Accelerator</h3>
-                    <p class="text-gray-600">18. Batch - September 2024</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-3xl text-accent mb-4">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Finance Accelerator</h3>
-                    <p class="text-gray-600">Kontinuierliche Unterstützung</p>
-                </div>
-
-                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="text-3xl text-purple-500 mb-4">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Cyber Valley AI Incubator</h3>
-                    <p class="text-gray-600">Batch #5 - November-Dezember 2024</p>
-                </div>
-            </div>
+            <p class="text-lg text-gray-600 mb-6 leading-relaxed text-center">
+                Flußdiagramm zum CGM-basierten Risiko Score zum Möglichmachen von Berufsunfähigkeitsversicherungen für DiabetikerInnen (<a href="https://diabsurance.de">diabsurance.de</a>).
+            </p>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-primary">
-        <div class="max-w-7xl mx-auto px-4">
+    <section id="Kontakt" class="py-12 gradient-bg">
+        <div class="container" id="contact">
             <div class="text-center text-white">
-                <h2 class="text-4xl font-bold mb-6">Lassen Sie uns zusammenarbeiten</h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-                    Interessiert an einer Zusammenarbeit? Möchten Sie mehr erfahren oder Details besprechen? 
+                <h2 class="text-4xl font-bold mb-6">Kontakt</h2>
+                <p class="text-xl max-w-3xl mx-auto opacity-90">
+                    Möchten Sie mehr erfahren oder Details besprechen? Interessiert an einer Zusammenarbeit? 
                     Kontaktieren Sie uns gerne!
                 </p>
                 
-                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8 mb-12">
-                    <a href="mailto:info@eddimed.eu" class="flex items-center text-white hover:text-blue-200 transition-colors duration-300 text-lg">
-                        <i class="fas fa-envelope mr-3 text-xl"></i>
-                        info@eddimed.eu
-                    </a>
-                    <a href="http://linkedin.com/company/eddimed" class="flex items-center text-white hover:text-blue-200 transition-colors duration-300 text-lg">
-                        <i class="fab fa-linkedin mr-3 text-xl"></i>
-                        LinkedIn
-                    </a>
+
+                <div class="flex flex-wrap justify-center space-x-8">
+                    <div class="flex flex-wrap items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-phone text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Telefon</div>
+                            <div class="opacity-90">+49 (0) 711 9933 5605</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">E-Mail</div>
+                            <div class="opacity-90">info@eddimed.eu</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div>
+                            <a href="https://outlook.office.com/book/Diabsurance@eddimed.eu/" target="_blank"
+                                rel="noopener noreferrer"
+                                class="inline-block bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">Kontakt&shy;an&shy;frage</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </div>
+                        <div>
+                            <a href="http://linkedin.com/company/eddimed" class="flex items-center text-white hover:text-blue-200 transition-colors duration-300 text-lg">
+                                LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-clock text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Sprechzeiten</div>
+                            <div class="opacity-90">Mo-Fr: 9:00-19:00 Uhr</div>
+                            <div class="opacity-90">oder nach Absprache</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="flex justify-center space-x-4">
-                    <a href="mailto:info@eddimed.eu" class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                        E-Mail senden
-                    </a>
-                    <a href="http://linkedin.com/company/eddimed" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105">
-                        LinkedIn besuchen
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
+    <!-- Partner Section (single row, 1 partner + 3 accelerators; equal cell heights; Acceleratoren header spans 3 cells) -->
+    <section id="Partner" class="py-4">
+        <div class="container">
+            <div class="overflow-x-auto">
+                <table class="w-full table-auto rounded-2xl shadow-lg">
+                    <thead>
+                        <tr>
+                            <th class="px-4 text-3xl lg:text-4xl font-bold text-gray-900 text-center align-bottom" colspan="1">Partner</th>
+                            <th class="px-4 text-3xl lg:text-4xl font-bold text-gray-900 text-center align-bottom" colspan="3">Acceleratoren</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="align-middle">
+                            <!-- Partner -->
+                            <td class="px-2 py-2">
+                                <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
+                                    <a href="https://diabsurance.de/">
+                                        <img src="img/diabsurance_logo_green.png" alt="Diabsurance" class="h-14 sm:h-16 md:h-20 w-auto object-contain" />
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- Accelerator 1 -->
+                            <td class="px-2 py-2">
+                                <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
+                                    <a href="https://www.finance-accelerator.de/">
+                                        <img src="img/finance-accelerator_black_letters-300x57.png" alt="Finance Accelerator" class="h-14 sm:h-16 md:h-20 w-auto object-contain" />
+                                    </a>
+                                </div>
+                            </td>
+                            <!-- Accelerator 2 -->
+                            <td class="px-2 py-2">
+                                <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
+                                    <a href="https://www.lifescience-bw.de/">
+                                        <img src="img/Life-Science-Acceletator_150x131.png" alt="Life Science Accelerator" class="h-28 sm:h-32 md:h-40 w-auto object-contain" />
+                                    </a>
+                                    <div class="text-white/80 text-xs mt-1 leading-tight">Batch 18 (Sep '24-25)</div>
+                                </div>
+                            </td>
+                            <!-- Accelerator 3 -->
+                            <td class="px-2 py-2">
+                                <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
+                                    <a href="https://www.cyber-valley.de/">
+                                        <img src="img/thumb_md_20210319_CYV_LogoLockup_vorab-300x85.jpg" alt="Cyber Valley" class="h-14 sm:h-16 md:h-20 w-auto object-contain" />
+                                    </a>
+                                    <div class="text-white/80 text-xs mt-1 leading-tight">Batch 5 (Nov-Dec '24)</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <div class="text-2xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-heartbeat mr-2 text-primary"></i>
-                        Eddimed
+    <footer class="bg-gray-900 text-white justify-between py-12">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="justify-center text-center">
+                    <div class="flex justify-center">
+                        <a href="https://eddimed.eu">
+                            <img src="img/eddimed_dark_bg_with_subtitle.png" alt="Eddimed" class="h-20" />
+                        </a>
                     </div>
-                    <p class="text-gray-400">
+                    <div class="text-sm mb-4 flex">
                         Innovative CGM-Datenanalyse und Risikobeurteilung aus Stuttgart.
-                    </p>
+                    </div>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Risikobewertung</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Online Shop</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">ML as a Service</a></li>
+                <div class="text-center space-y-2 mb-4">
+                    <h4 class="text-lg font-semibold mb-4">Sitemap</h4>
+                    <ul class="space-y-2 text-gray-400 mb-6">
+                        <li><a href="index.html" class="hover:text-white transition-colors duration-300">Index.html</a></li>
+                        <li><a href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Unternehmen</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Über uns</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Partner</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Karriere</a></li>
-                    </ul>
-                </div>
-                
-                <div>
+                <div class="text-center">
                     <h4 class="text-lg font-semibold mb-4">Kontakt</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2"></i>
-                            Stuttgart, Deutschland
+                        <li>
+                            <i class="fas fa-phone mr-2"></i>
+                            +49 (0) 711 9933 5605
                         </li>
-                        <li class="flex items-center">
+                        <li>
                             <i class="fas fa-envelope mr-2"></i>
-                            info@eddimed.eu
+                            info [at] eddimed.eu
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                            rel="noopener noreferrer">Stuttgart</a>, Deutschland
                         </li>
                     </ul>
                 </div>
             </div>
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 Eddimed. Alle Rechte vorbehalten.</p>
+                <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
+                        rel="noopener noreferrer">Stuttgart</a>, Okt 2025 - Eddimed - Alle Rechte vorbehalten - <a
+                        href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>
             </div>
         </div>
     </footer>
@@ -287,7 +418,7 @@
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('nav');
             if (window.scrollY > 100) {
-                navbar.classList.add('bg-white', 'shadow-lg');
+                navbar.classList.add('shadow-lg');
             } else {
                 navbar.classList.remove('shadow-lg');
             }
