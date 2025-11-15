@@ -146,10 +146,25 @@
                         Meeting anfragen
                     </a>
                 </div>
-                <div class="md:hidden">
+
+                <div id="dropdown-toggle" class="md:hidden">
                     <button class="text-gray-700 hover:text-diab-blue">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
+                </div>
+
+                <!-- Freischwebendes Menü auf kleinen Bildschirmen -->
+                <div id="dropdown-menu"
+                    class="absolute top-0 right-0 mt-5 w-50 bg-white border border-gray-200 rounded shadow-lg hidden z-100">
+                    <div class="flex flex-col space-y-2 p-4 text-center">
+                        <a href="#About" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Über uns</a>
+                        <a href="#Expertise" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Expertise</a>
+                        <a href="#Risiko_Score" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Risiko Score</a>
+                        <a href="#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
+                        <a href="https://outlook.office.com/book/Eddimed1@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                            Meeting anfragen
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -170,7 +185,7 @@
                     </h1>
                     <p class="text-xl text-gray-700 mb-8 leading-relaxed">
                         Innovative Lösungen für kontinuierliche Glukose-Monitoring-Datenanalyse, 
-                        Sensor Fusion und ML-basierte Services.
+                        Sensor Fusion und ML-basierte Services aus Stuttgart.
                     </p>
         </div>
     </section>
@@ -186,18 +201,6 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Sensor Fusion -->
-                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
-                    <div class="text-4xl text-diab-blue mb-6">
-                        <i class="fas fa-link"></i>
-                        <i class="fas fa-crosshairs"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Sensor Fusion</h3>
-                    <p class="text-gray-600 mb-6">
-                        Bei Sensor Fusion werden unterschiedliche Sensorsignale kombiniert um ein präziseres, robusteres und vollständigeres Bild der Realität zu bekommen. Dabei gleichen sich die Stärken und Schwächen der Einzelsensoren aus.
-                        Wir haben langjährige Expertise in der Sensor Fusion beim autonomen Fahren und im medizinischen Bereich gesammelt und wissen auch um die damit einhergehenden Herausforderungen.
-                    </p>
-                </div>
 
                 <!-- Analytics + ML -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
@@ -211,6 +214,19 @@
                     <a href="https://outlook.office.com/book/Eddimed1@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
                         Meeting anfragen
                     </a>
+                </div>
+
+                <!-- Sensor Fusion -->
+                <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
+                    <div class="text-4xl text-diab-blue mb-6">
+                        <i class="fas fa-link"></i>
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Sensor Fusion</h3>
+                    <p class="text-gray-600 mb-6">
+                        Bei Sensor Fusion werden unterschiedliche Sensorsignale kombiniert um ein präziseres, robusteres und vollständigeres Bild der Realität zu bekommen. Dabei gleichen sich die Stärken und Schwächen der Einzelsensoren aus.
+                        Wir haben langjährige Expertise in der Sensor Fusion beim autonomen Fahren und im medizinischen Bereich gesammelt und wissen auch um die damit einhergehenden Herausforderungen.
+                    </p>
                 </div>
             </div>
         </div>
@@ -360,7 +376,7 @@
                         </a>
                     </div>
                     <div class="text-sm mb-4 flex">
-                        Innovative CGM-Datenanalyse und Risikobeurteilung aus Stuttgart.
+                        Innovative Lösungen für kontinuierliche Glukose-Monitoring-Datenanalyse, Sensor Fusion und ML-basierte Services.
                     </div>
                 </div>
                 
@@ -421,12 +437,35 @@
         // Add scroll effect to navbar
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('nav');
-            if (window.scrollY > 100) {
+            if (window.scrollY > 50) {
                 navbar.classList.add('shadow-lg');
             } else {
                 navbar.classList.remove('shadow-lg');
             }
         });
+
+                // Navigation bar, Hamburger menu, drop-down list
+        document.addEventListener('DOMContentLoaded', function () {
+            initDropdown('dropdown-toggle', 'dropdown-menu');
+            initDropdown('dropdown-toggle-anchor', 'dropdown-menu-anchor');
+            initDropdown('dropdown-toggle-anchor2', 'dropdown-menu-anchor2');
+        });
+
+        function initDropdown(toggleID, menuID) {
+            const toggle = document.getElementById(toggleID);
+            const menu = document.getElementById(menuID);
+
+            toggle.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+
+            // Optional: Klick außerhalb schließt Menü
+            document.addEventListener('click', (event) => {
+                if (!toggle.contains(event.target) && !menu.contains(event.target)) {
+                    menu.classList.add('hidden');
+                }
+            });
+        }
     </script>
 </body>
 </html>
