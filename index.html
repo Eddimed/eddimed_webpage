@@ -28,7 +28,7 @@
 
     <meta name="robots" content="index, follow">
 
-    <title>Eddimed - CGM Data Analytics & Risk Assessment</title>
+    <title>Eddimed - CGM Data Analytics & Sensor Fusion</title>
     <link rel="icon" href="img/ed_logo.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -142,6 +142,9 @@
                     <a href="#Expertise" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Expertise</a>
                     <a href="#Risiko_Score" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Risiko Score</a>
                     <a href="#Kontakt" class="text-gray-700 hover:text-diab-blue transition-colors duration-300 font-medium">Kontakt</a>
+                    <a href="https://outlook.office.com/book/Eddimed1@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Meeting anfragen
+                    </a>
                 </div>
                 <div class="md:hidden">
                     <button class="text-gray-700 hover:text-diab-blue">
@@ -159,15 +162,15 @@
                         <i class="fas fa-map-marker-alt mr-2"></i>
                         <a
                         href="https://www.openstreetmap.org/relation/2793104" target="_blank"
-                        rel="noopener noreferrer">Stuttgart</a>, Okt 2025</div>
+                        rel="noopener noreferrer">Stuttgart</a>, Nov 2025</div>
                     <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
                         CGM Data 
                         <span class="text-diab-blue">Analytics</span> 
-                        & Risk Assessment
+                        & Sensor Fusion
                     </h1>
                     <p class="text-xl text-gray-700 mb-8 leading-relaxed">
                         Innovative Lösungen für kontinuierliche Glukose-Monitoring-Datenanalyse, 
-                        Risikobeurteilung für Versicherungen und ML-basierte Services.
+                        Sensor Fusion und ML-basierte Services.
                     </p>
         </div>
     </section>
@@ -183,18 +186,17 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Risk Assessment -->
+                <!-- Sensor Fusion -->
                 <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 hover-lift">
                     <div class="text-4xl text-diab-blue mb-6">
-                        <i class="fas fa-shield-alt"></i>
+                        <i class="fas fa-link"></i>
+                        <i class="fas fa-crosshairs"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Risikobewertung</h3>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Sensor Fusion</h3>
                     <p class="text-gray-600 mb-6">
-                        Professionelle Risikobeurteilung für Berufsunfähigkeitsversicherungen basierend auf CGM-Daten.
+                        Bei Sensor Fusion werden unterschiedliche Sensorsignale kombiniert um ein präziseres, robusteres und vollständigeres Bild der Realität zu bekommen. Dabei gleichen sich die Stärken und Schwächen der Einzelsensoren aus.
+                        Wir haben langjährige Expertise in der Sensor Fusion beim autonomen Fahren und im medizinischen Bereich gesammelt und wissen auch um die damit einhergehenden Herausforderungen.
                     </p>
-                    <a href="#" class="text-diab-blue font-semibold hover:text-blue-600 transition-colors duration-300">
-                        Mehr erfahren <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
                 </div>
 
                 <!-- Analytics + ML -->
@@ -206,8 +208,8 @@
                     <p class="text-gray-600 mb-6">
                         Machine Learning Lösungen basierend auf kontinuierlichen Glukose-Monitoring-Daten.
                     </p>
-                    <a href="#" class="text-diab-blue font-semibold hover:text-blue-600 transition-colors duration-300">
-                        Service erkunden <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="https://outlook.office.com/book/Eddimed1@eddimed.eu/" target="_blank" class="bg-diab-blue text-white px-6 py-2.5 rounded-full hover:bg-blue-600 transition-all duration-300 font-medium">
+                        Meeting anfragen
                     </a>
                 </div>
             </div>
@@ -218,13 +220,12 @@
     <section id="Risiko_Score" class="py-12">
         <div id="CRS"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">CGM-basierter Risiko Score (CRS)</h2>
+            <h2 class="text-center text-4xl font-bold text-gray-900 mb-6">Forschungsaktivität</h2>
             <div class="text-center">
-                <img src="img/CGM-basierter_Risiko_Score_Eddimed_202509.png" alt="Risiko Score" style="margin:auto">
+                <a href="https://europepmc.org/article/MED/37750308">
+                    <img src="img/GV_Paper_OpenDiabetes_2023.png" alt="CGM-Datenanalyse mit Fokus Glucose-Variabilität" style="margin:auto">
+                </a>
             </div>
-            <p class="text-lg text-gray-600 mb-6 leading-relaxed text-center">
-                Flußdiagramm zum CGM-basierten Risiko Score zum Möglichmachen von Berufsunfähigkeitsversicherungen für DiabetikerInnen (<a href="https://diabsurance.de">diabsurance.de</a>).
-            </p>
         </div>
     </section>
 
@@ -299,20 +300,21 @@
                 <table class="w-full table-auto rounded-2xl shadow-lg">
                     <thead>
                         <tr>
-                            <th class="px-4 text-3xl lg:text-4xl font-bold text-gray-900 text-center align-bottom" colspan="1">Partner</th>
+                            <!--
+                            <th class="px-4 text-3xl lg:text-4xl font-bold text-gray-900 text-center align-bottom" colspan="1">Partner</th> -->
                             <th class="px-4 text-3xl lg:text-4xl font-bold text-gray-900 text-center align-bottom" colspan="3">Acceleratoren</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="align-middle">
-                            <!-- Partner -->
+                            <!-- Partner 
                             <td class="px-2 py-2">
                                 <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
                                     <a href="https://diabsurance.de/">
                                         <img src="img/diabsurance_logo_green.png" alt="Diabsurance" class="h-14 sm:h-16 md:h-20 w-auto object-contain" />
                                     </a>
                                 </div>
-                            </td>
+                            </td> -->
                             <!-- Accelerator 1 -->
                             <td class="px-2 py-2">
                                 <div class="flex flex-col items-center justify-center min-h-36 sm:min-h-40 md:min-h-48">
@@ -392,7 +394,7 @@
             
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
                 <p>&copy; <a href="https://www.openstreetmap.org/relation/2793104" target="_blank"
-                        rel="noopener noreferrer">Stuttgart</a>, Okt 2025 - Eddimed - Alle Rechte vorbehalten - <a
+                        rel="noopener noreferrer">Stuttgart</a>, Nov 2025 - Eddimed - Alle Rechte vorbehalten - <a
                         href="impressum.html" class="hover:text-white transition-colors duration-300">Impressum</a>
             </div>
         </div>
